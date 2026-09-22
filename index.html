@@ -3,15 +3,161 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Collez ici votre balise Google Ads (gtag.js) -->
 <title>Plombier Loiret 45</title>
 <meta name="description" content="Plombier dans le Loiret (45) : fuite d'eau, débouchage, chauffe-eau, dépannage 7j/7 à Orléans, Olivet, Montargis, Gien, Pithiviers. Appelez maintenant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="style.css">
-<!-- Collez ici votre balise Google Ads (gtag.js) -->
-</head>
-<body>
+<style>
+  /* ====== À PERSONNALISER : couleurs ====== */
+  :root{
+    color-scheme: light;
+    --eau:#0B3D5C;       /* bleu profond */
+    --eau-2:#12577F;
+    --cuivre:#D2692B;    /* couleur des boutons d'appel */
+    --cuivre-2:#B85720;
+    --fond:#F3F7F9;
+    --blanc:#FFFFFF;
+    --encre:#0E1A24;
+    --gris:#5A6B78;
+    --trait:#D8E2E8;
+    --vert:#1F8A4C;
+    --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+    --body:"Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.55 var(--body);padding-bottom:84px}
+  @media (min-width:860px){body{padding-bottom:0}}
+  a{color:inherit}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+  .wrap{max-width:1080px;margin:0 auto;padding-inline:16px}
+  h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+  h2{font-size:clamp(30px,5vw,42px);font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+  .eyebrow{font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--cuivre-2)}
+  section{padding-block:48px}
+  :focus-visible{outline:3px solid var(--cuivre);outline-offset:2px}
+
+  /* ---------- Header ---------- */
+  .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--eau);color:#fff}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+  .logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .logo svg{flex:none}
+  .logo span{color:#8FD0F2}
+  .top-call{display:flex;align-items:center;gap:10px;text-decoration:none;background:var(--cuivre);padding:8px 14px;border-radius:6px;font-weight:700}
+  .top-call b{font-family:var(--display);font-size:22px;letter-spacing:.03em}
+  .top-call small{display:none;font-size:12px;font-weight:600;opacity:.9;line-height:1.1}
+  @media (min-width:600px){.top-call small{display:block}}
+
+  /* ---------- Hero ---------- */
+  .hero{background:linear-gradient(180deg,var(--eau) 0%,var(--eau-2) 100%);color:#fff;padding-block:36px 44px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto -10% -1px -10%;height:38px;background:var(--fond);border-radius:50% 50% 0 0/100% 100% 0 0}
+  .hero .wrap{position:relative;z-index:1;display:grid;gap:28px}
+  @media (min-width:860px){.hero .wrap{grid-template-columns:1.25fr .9fr;align-items:center}}
+  .dispo{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:99px;font-size:14px;font-weight:600}
+  .dot{width:9px;height:9px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:pulse 1.8s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+  .hero h1{font-size:clamp(40px,7.4vw,68px);font-weight:800;text-transform:uppercase;margin-top:14px}
+  .hero h1 em{font-style:normal;color:#FFB27A}
+  .hero p.lead{font-size:19px;max-width:34em;margin:14px 0 22px;color:#DCEAF2}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn-call{display:inline-flex;align-items:center;gap:12px;background:var(--cuivre);color:#fff;text-decoration:none;padding:14px 22px;border-radius:8px;box-shadow:0 6px 0 var(--cuivre-2);transition:transform .12s, box-shadow .12s}
+  .btn-call:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--cuivre-2)}
+  .btn-call .num{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:.03em;line-height:1}
+  .btn-call .lbl{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.95}
+  .btn-ghost{display:inline-flex;align-items:center;padding:14px 20px;border-radius:8px;border:2px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;font-weight:700}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .checks{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px 20px;font-weight:600;font-size:16px}
+  .checks li{display:flex;align-items:center;gap:7px}
+  .checks svg{color:#4ADE80;flex:none}
+
+  .hero-card{background:#fff;color:var(--encre);border-radius:12px;padding:22px;box-shadow:0 18px 40px rgba(4,25,40,.35)}
+  .hero-card h3{font-size:24px;text-transform:uppercase}
+  .steps{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:14px;counter-reset:s}
+  .steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;counter-increment:s}
+  .steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--eau);color:#fff;font-family:var(--display);font-weight:800;font-size:19px}
+  .steps b{display:block}
+  .steps span{color:var(--gris);font-size:15px}
+
+  /* ---------- Bandeau confiance ---------- */
+  .trust{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--trait);border:1px solid var(--trait);border-radius:10px;overflow:hidden;margin-top:-6px}
+  @media (min-width:760px){.trust{grid-template-columns:repeat(4,1fr)}}
+  .trust div{background:var(--blanc);padding:16px;display:flex;flex-direction:column;gap:2px}
+  .trust b{font-family:var(--display);font-size:26px;color:var(--eau);line-height:1}
+  .trust span{font-size:14px;color:var(--gris)}
+
+  /* ---------- Services ---------- */
+  .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px;margin-bottom:22px}
+  .head p{margin:6px 0 0;color:var(--gris);max-width:36em}
+  .services{display:grid;gap:14px;grid-template-columns:1fr}
+  @media (min-width:600px){.services{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:960px){.services{grid-template-columns:repeat(3,1fr)}}
+  .svc{background:var(--blanc);border:1px solid var(--trait);border-radius:10px;padding:18px;display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;text-decoration:none;transition:border-color .15s, transform .15s}
+  .svc:hover{border-color:var(--cuivre);transform:translateY(-2px)}
+  .svc .ic{width:46px;height:46px;border-radius:10px;background:#E4EFF5;color:var(--eau);display:grid;place-items:center}
+  .svc h3{font-size:23px;text-transform:uppercase;letter-spacing:.01em}
+  .svc p{margin:4px 0 8px;font-size:15px;color:var(--gris)}
+  .svc .go{font-size:14px;font-weight:700;color:var(--cuivre-2)}
+  .svc.urgent{background:var(--eau);border-color:var(--eau);color:#fff}
+  .svc.urgent .ic{background:var(--cuivre);color:#fff}
+  .svc.urgent p{color:#CFE3EE}
+  .svc.urgent .go{color:#FFB27A}
+
+  /* ---------- Bande appel ---------- */
+  .band{background:var(--cuivre);color:#fff;padding-block:26px}
+  .band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  .band h2{font-size:clamp(26px,4.4vw,36px)}
+  .band a{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--cuivre-2);text-decoration:none;padding:12px 20px;border-radius:8px;font-family:var(--display);font-weight:800;font-size:28px}
+
+  /* ---------- Villes ---------- */
+  .zones{display:grid;gap:22px}
+  @media (min-width:860px){.zones{grid-template-columns:1fr 1fr}}
+  .zone h3{font-size:20px;text-transform:uppercase;color:var(--eau);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .zone h3 small{font-family:var(--body);font-size:13px;font-weight:600;color:var(--gris);text-transform:none}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips a{text-decoration:none;background:var(--blanc);border:1px solid var(--trait);padding:7px 12px;border-radius:99px;font-size:15px;font-weight:600}
+  .chips a:hover{border-color:var(--eau);color:var(--eau)}
+  .chips a.main{background:var(--eau);border-color:var(--eau);color:#fff}
+  .zone-note{margin-top:18px;font-size:15px;color:var(--gris)}
+
+  /* ---------- Formulaire ---------- */
+  .form-sec{background:var(--blanc);border-top:1px solid var(--trait)}
+  .form-grid{display:grid;gap:26px}
+  @media (min-width:860px){.form-grid{grid-template-columns:.85fr 1.15fr;align-items:start}}
+  .form-side p{color:var(--gris)}
+  .form-side .alt{margin-top:18px;padding:16px;border-radius:10px;background:#FFF3EA;border:1px solid #F5CDB2}
+  .form-side .alt b{display:block;font-family:var(--display);font-size:30px;color:var(--cuivre-2);letter-spacing:.02em}
+  form{display:grid;gap:14px;background:var(--fond);border:1px solid var(--trait);border-radius:12px;padding:20px}
+  .row{display:grid;gap:14px}
+  @media (min-width:560px){.row{grid-template-columns:1fr 1fr}}
+  label{display:grid;gap:5px;font-weight:700;font-size:15px}
+  label .opt{font-weight:400;color:var(--gris)}
+  input,select,textarea{font:inherit;font-size:16px;padding:12px;border:1.5px solid #BFCDD6;border-radius:8px;background:#fff;color:var(--encre);width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--eau);box-shadow:0 0 0 3px rgba(18,87,127,.18)}
+  textarea{min-height:96px;resize:vertical}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--gris)}
+  .consent input{width:18px;height:18px;margin-top:3px;flex:none}
+  button[type=submit]{font:800 22px var(--display);text-transform:uppercase;letter-spacing:.04em;background:var(--eau);color:#fff;border:0;border-radius:8px;padding:14px;cursor:pointer}
+  button[type=submit]:hover{background:var(--eau-2)}
+  .err{color:#B42318;font-size:14px;font-weight:600}
+  .ok{background:#E7F6EC;border:1px solid #9BD4AF;color:#14532D;padding:16px;border-radius:10px;font-weight:600}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--encre);color:#A9B8C3;font-size:14px;padding-block:26px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+  footer a{color:#DCE6ED}
+
+  /* ---------- Barre d'appel mobile ---------- */
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--trait);box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:8px;font-weight:700}
+  .mbar .m-call{background:var(--cuivre);color:#fff;padding:12px;font-family:var(--display);font-size:22px;font-weight:800;letter-spacing:.02em}
+  .mbar .m-form{border:2px solid var(--eau);color:var(--eau);padding:10px 14px;font-size:15px}
+  @media (min-width:860px){.mbar{display:none}}
+
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
 
 <!-- ======================================================
      À PERSONNALISER : remplacez partout
@@ -20,6 +166,8 @@
      - SIRET, adresse, horaires, tarif déplacement
      ====================================================== -->
 
+</head>
+<body>
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#">
@@ -27,7 +175,7 @@
       Plomberie <span>du Loiret</span>
     </a>
     <a class="top-call js-call" href="tel:+33238000000" aria-label="Appeler le 02 38 00 00 00">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.250.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.2Z"/></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.2Z"/></svg>
       <small>Urgence<br>7j/7</small>
       <b>02 38 00 00 00</b>
     </a>
@@ -242,6 +390,48 @@
   <a class="m-form" href="#devis">Devis</a>
 </nav>
 
-<script src="script.js"></script>
+<script>
+  /* ====== Configuration ======
+     FORM_ENDPOINT : URL de votre service de formulaire (ex. Formspree, Getform, votre backend).
+     Laissé vide = aperçu, rien n'est envoyé. */
+  var FORM_ENDPOINT = "";
+
+  /* Suivi des conversions Google Ads (clic sur un numéro).
+     Collez votre balise gtag dans le <head> puis remplacez AW-XXXX/YYYY. */
+  function trackCall(){
+    if (typeof gtag === "function") {
+      gtag("event", "conversion", { send_to: "AW-XXXXXXXXX/YYYYYYYYYYY" });
+    }
+  }
+  document.querySelectorAll(".js-call").forEach(function(a){ a.addEventListener("click", trackCall); });
+
+  var form = document.getElementById("leadForm");
+  var err = document.getElementById("formErr");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var tel = form.telephone.value.replace(/[\s.\-]/g, "");
+    var msgs = [];
+    if (!form.nom.value.trim()) msgs.push("indiquez votre nom");
+    if (!/^(\+33|0)[1-9]\d{8}$/.test(tel)) msgs.push("saisissez un numéro à 10 chiffres (ex. 06 12 34 56 78)");
+    if (!form.ville.value.trim()) msgs.push("indiquez votre ville");
+    if (!form.service.value) msgs.push("choisissez votre besoin");
+    if (!form.rgpd.checked) msgs.push("cochez la case d'accord de rappel");
+    if (msgs.length){ err.textContent = "Pour envoyer : " + msgs.join(", ") + "."; err.hidden = false; return; }
+    err.hidden = true;
+
+    function done(text){
+      form.innerHTML = '<div class="ok">' + text + '</div>';
+      if (typeof gtag === "function") gtag("event", "conversion", { send_to: "AW-XXXXXXXXX/ZZZZZZZZZZZ" });
+    }
+    if (!FORM_ENDPOINT){
+      done("Aperçu : le formulaire fonctionne mais n'est pas encore relié à un service d'envoi. Renseignez FORM_ENDPOINT en bas du fichier index.html pour recevoir les demandes.");
+      return;
+    }
+    fetch(FORM_ENDPOINT, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
+      .then(function(r){ if (!r.ok) throw 0; done("Merci, votre demande est bien reçue. Un plombier vous rappelle au plus vite."); })
+      .catch(function(){ err.textContent = "L'envoi n'a pas abouti. Appelez-nous directement au 02 38 00 00 00."; err.hidden = false; });
+  });
+</script>
+
 </body>
 </html>
